@@ -11,3 +11,19 @@ body {
   padding: 40px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
 }
+input.search-input {
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  font-size: 16px;
+  color: lightgray;
+}
+input.search-submit {
+  background-color: purple;
+  border: none;
+  border-radius: 10px;
+  padding: 20px 30px;
+  color: white;
+  font-size: 16px;
+}
