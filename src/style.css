@@ -1,10 +1,20 @@
 body {
-  background-color: white;
+  background-color: plum;
   font-family: "Roboto", sans-serif;
 }
 
+header {
+  border-bottom: 1px solid rgb(255, 255, 255);
+  padding: 20px 0;
+}
+
 .weather-app {
-  background: plum;
+  background: linear-gradient(
+    180deg,
+    rgba(26, 13, 71, 1) 0%,
+    rgba(97, 52, 141, 1) 100%
+  );
+
   max-width: 600px;
   margin: 70px auto;
   border-radius: 20px;
@@ -17,7 +27,6 @@ input.search-input {
   padding: 20px;
   width: 80%;
   font-size: 16px;
-  color: lightgray;
 }
 input.search-submit {
   background-color: purple;
@@ -26,4 +35,11 @@ input.search-submit {
   padding: 20px 30px;
   color: white;
   font-size: 16px;
+}
+
+footer {
+  border-top: 1px solid rgb(255, 255, 255);
+  padding: 20px 30px 0 0;
+  text-align: center;
+  font-size: ;
 }
