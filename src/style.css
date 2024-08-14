@@ -9,11 +9,7 @@ header {
 }
 
 .weather-app {
-  background: linear-gradient(
-    180deg,
-    rgba(26, 13, 71, 1) 0%,
-    rgba(97, 52, 141, 1) 100%
-  );
+  background: grey;
 
   max-width: 600px;
   margin: 70px auto;
@@ -36,7 +32,31 @@ input.search-submit {
   color: white;
   font-size: 16px;
 }
+.weather-app-info {
+  display: flex;
+  justify-content: space-between;
+}
 
+.weather-app-city {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.weather-app-temperature {
+  display: flex;
+  font-size: 80px;
+
+  margin-left: 10px;
+  font-weight: bold;
+}
+.weather-app-unit {
+  font-size: 30px;
+  margin-top: 16px;
+}
+
+.weather-app-icon {
+  font-size: 40px;
+}
 footer {
   border-top: 1px solid rgb(255, 255, 255);
   padding: 20px 30px 0 0;
