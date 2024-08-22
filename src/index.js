@@ -4,21 +4,24 @@ function refreshWeather(response) {
   let cityElement = document.querySelector("#city-name");
   let conditionsElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
-  let windSpeedElement = document.querySelector("#wind-speed");
+  let windElement = document.querySelector("#wind-speed");
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
 
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = Math.round(temperature);
   conditionsElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-  windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
+  windElement.innerHTML = `${response.data.wind.speed}km/h`;
   timeElement.innerHTML = formatDate(date);
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 }
 
 function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
+  console.log(hours);
   let days = [
     "Sunday",
     "Monday",
@@ -47,10 +50,10 @@ function handleSearch(event) {
   let searchInput = document.querySelector("#search-input");
   let city = document.querySelector("#city-name");
   city.innerHTML = searchInput.value;
-  searchCity(searchInput.value); //call the search city function
+  searchCity(searchInput.value);
 }
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearch);
 
-searchCity("Cape Town");
+searchCity("Tamarin");
